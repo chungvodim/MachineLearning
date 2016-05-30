@@ -11,7 +11,7 @@ project_submissions = read_csv('data\IntroToDataAnalysis\project_submissions.csv
 
 udacity_test_accounts = set()
 for enrollment in enrollments:
-    if enrollment['is_udacity']:
+    if enrollment['is_udacity'] == 'True':
         udacity_test_accounts.add(enrollment['account_key'])
 print 'number of test accounts: {}'.format(len(udacity_test_accounts))
 
@@ -68,13 +68,45 @@ print 'number of non_udacity_enrollment: {}'.format(len(non_udacity_enrollments)
 print 'number of non_udacity_engagement: {}'.format(len(non_udacity_engagement))
 print 'number of non_udacity_submissions: {}'.format(len(non_udacity_submissions))
 
+# Refining the question
 paid_students = {}
 for enrollment in non_udacity_enrollments:
-    if (not enrollment['is_canceled'] or
-            enrollment['days_to_cancel'] > 7):
+    if not enrollment['is_canceled'] or enrollment['days_to_cancel'] > 7:
         account_key = enrollment['account_key']
         enrollment_date = enrollment['join_date']
-        if (account_key not in paid_students or
-                enrollment_date > paid_students[account_key]):
+        if account_key not in paid_students or enrollment_date > paid_students[account_key]:
             paid_students[account_key] = enrollment_date
 print 'number of paid student: {}'.format(len(paid_students))
+
+# Getting Data from First Week
+from datetime import datetime
+
+def within_one_week(join_date, engagement_date):
+    time_delta = datetime.strptime(engagement_date, '%Y-%m-%d') - datetime.strptime(join_date, '%Y-%m-%d')
+    return time_delta.days < 7
+
+def remove_free_trial_cancels(data):
+    new_data = []
+    for data_point in data:
+        if data_point['account_key'] in paid_students:
+            new_data.append(data_point)
+    return new_data
+
+paid_enrollments = remove_free_trial_cancels(non_udacity_enrollments)
+paid_engagement = remove_free_trial_cancels(non_udacity_engagement)
+paid_submissions = remove_free_trial_cancels(non_udacity_submissions)
+
+print 'number of paid enrollments: {0}'.format(len(paid_enrollments))
+print 'number of paid engagement: {0}'.format(len(paid_engagement))
+print 'number of paid submissions: {0}'.format(len(paid_submissions))
+
+paid_engagement_in_first_week = []
+for engagement_record in paid_engagement:
+    account_key = engagement_record['account_key']
+    join_date = paid_students[account_key]
+    engagement_record_date = engagement_record['utc_date']
+
+    if within_one_week(join_date, engagement_record_date):
+        paid_engagement_in_first_week.append(engagement_record)
+
+print 'number of paid engagement in first week: {0}'.format(len(paid_engagement_in_first_week))
