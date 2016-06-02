@@ -120,39 +120,39 @@ if True:
     a = np.array([True, True, False, False])
     b = np.array([True, False, True, False])
     
-    print a & b
-    print a | b
-    print ~a
+    print 'a & b: {0}'.format(a & b)
+    print 'a | b: {0}'.format(a | b)
+    print '~a: {0}'.format(~a)
     
-    print a & True
-    print a & False
+    print 'a & True: {0}'.format(a & True)
+    print 'a & False: {0}'.format(a & False)
     
-    print a | True
-    print a | False
+    print 'a | True: {0}'.format(a | True)
+    print 'a | False: {0}'.format(a | False)
     
 # Comparison operations between 2 NumPy Arrays
 if True:
     a = np.array([1, 2, 3, 4, 5])
     b = np.array([5, 4, 3, 2, 1])
     
-    print a > b
-    print a >= b
-    print a < b
-    print a <= b
-    print a == b
-    print a != b
+    print 'a > b: {0}'.format(a > b)
+    print 'a >= b: {0}'.format(a >= b)
+    print 'a < b: {0}'.format(a < b)
+    print 'a <= b: {0}'.format(a <= b)
+    print 'a == b: {0}'.format(a == b)
+    print 'a != b: {0}'.format(a != b)
     
 # Comparison operations between a NumPy array and a single number
 if True:
     a = np.array([1, 2, 3, 4])
     b = 2
     
-    print a > b
-    print a >= b
-    print a < b
-    print a <= b
-    print a == b
-    print a != b
+    print 'a > b: {0}'.format(a > b)
+    print 'a >= b: {0}'.format(a >= b)
+    print 'a < b: {0}'.format(a < b)
+    print 'a <= b: {0}'.format(a <= b)
+    print 'a == b: {0}'.format(a == b)
+    print 'a != b: {0}'.format(a != b)
     
 # First 20 countries with school completion data
 countries = np.array([
@@ -185,4 +185,163 @@ def overall_completion_rate(female_completion, male_completion):
     arrays giving the female and male completion of each country in
     the same order.
     '''
-    return None
+    return (female_completion + male_completion) / 2
+
+print overall_completion_rate(female_completion,male_completion)
+
+# First 20 countries with employment data
+countries = np.array([
+    'Afghanistan', 'Albania', 'Algeria', 'Angola', 'Argentina',
+    'Armenia', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas',
+    'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium',
+    'Belize', 'Benin', 'Bhutan', 'Bolivia',
+    'Bosnia and Herzegovina'
+])
+
+# Employment data in 2007 for those 20 countries
+employment = np.array([
+    55.70000076,  51.40000153,  50.5       ,  75.69999695,
+    58.40000153,  40.09999847,  61.5       ,  57.09999847,
+    60.90000153,  66.59999847,  60.40000153,  68.09999847,
+    66.90000153,  53.40000153,  48.59999847,  56.79999924,
+    71.59999847,  58.40000153,  70.40000153,  41.20000076
+])
+
+# Change this country name to change what country will be printed when you
+# click "Test Run". Your function will be called to determine the standardized
+# score for this country for each of the given 5 Gapminder variables in 2007.
+# The possible country names are available in the Downloadables section.
+
+country_name = 'United States'
+
+def standardize_data(values):
+    standardized_value = (values - values.mean()) / values.std()
+    return standardized_value
+
+# Change False to True for each block of code to see what it does
+
+# Using index arrays
+if True:
+    a = np.array([1, 2, 3, 4])
+    b = np.array([True, True, False, False])
+    
+    print a[b]
+    print a[np.array([True, False, True, False])]
+    
+# Creating the index array using vectorized operations
+if True:
+    a = np.array([1, 2, 3, 2, 1])
+    b = (a >= 2)
+    
+    print a[b]
+    print a[a >= 2]
+    
+# Creating the index array using vectorized operations on another array
+if True:
+    a = np.array([1, 2, 3, 4, 5])
+    b = np.array([1, 2, 3, 2, 1])
+    
+    print b == 2
+    print a[b == 2]
+
+def mean_time_for_paid_students(time_spent, days_to_cancel):
+    return time_spent[days_to_cancel >= 7]
+
+# Time spent in the classroom in the first week for 20 students
+time_spent = np.array([
+       12.89697233,    0.        ,   64.55043217,    0.        ,
+       24.2315615 ,   39.991625  ,    0.        ,    0.        ,
+      147.20683783,    0.        ,    0.        ,    0.        ,
+       45.18261617,  157.60454283,  133.2434615 ,   52.85000767,
+        0.        ,   54.9204785 ,   26.78142417,    0.
+])
+
+# Days to cancel for 20 students
+days_to_cancel = np.array([
+      4,   5,  37,   3,  12,   4,  35,  38,   5,  37,   3,   3,  68,
+     38,  98,   2, 249,   2, 127,  35
+])
+
+#############################################
+countries = ['Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda',
+             'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan',
+             'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus',
+             'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia']
+
+life_expectancy_values = [74.7,  75. ,  83.4,  57.6,  74.6,  75.4,  72.3,  81.5,  80.2,
+                          70.3,  72.1,  76.4,  68.1,  75.2,  69.8,  79.4,  70.8,  62.7,
+                          67.3,  70.6]
+
+gdp_values = [ 1681.61390973,   2155.48523109,  21495.80508273,    562.98768478,
+              13495.1274663 ,   9388.68852258,   1424.19056199,  24765.54890176,
+              27036.48733192,   1945.63754911,  21721.61840978,  13373.21993972,
+                483.97086804,   9783.98417323,   2253.46411147,  25034.66692293,
+               3680.91642923,    366.04496652,   1175.92638695,   1132.21387981]
+
+# Life expectancy and gdp data in 2007 for 20 countries
+life_expectancy = pd.Series(life_expectancy_values)
+gdp = pd.Series(gdp_values)
+
+# Change False to True for each block of code to see what it does
+
+# Accessing elements and slicing
+if True:
+    print 'life_expectancy[0]: {0}'.format(life_expectancy[0])
+    print 'gdp[3:6]: {0}'.format(gdp[3:6])
+    
+# Looping
+if True:
+    for country_life_expectancy in life_expectancy:
+        print 'Examining life expectancy {}'.format(country_life_expectancy)
+        
+# Pandas functions
+if True:
+    print life_expectancy.mean()
+    print life_expectancy.std()
+    print gdp.max()
+    print gdp.sum()
+
+# Vectorized operations and index arrays
+if True:
+    a = pd.Series([1, 2, 3, 4])
+    b = pd.Series([1, 2, 1, 2])
+  
+    print 'a + b: {0}'.format(a + b)
+    print 'a * 2: {0}'.format(a * 2)
+    print 'a >= 3: {0}'.format(a >= 3)
+    print 'a[a >= 3]: {0}'.format(a[a >= 3])
+   
+def variable_correlation(variable1, variable2):
+    
+    num_same_direction = None        # Replace this with your code
+    num_different_direction = None   # Replace this with your code
+    
+    return (num_same_direction, num_different_direction)
+##############################################
+countries = [
+    'Afghanistan', 'Albania', 'Algeria', 'Angola', 'Argentina',
+    'Armenia', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas',
+    'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium',
+    'Belize', 'Benin', 'Bhutan', 'Bolivia',
+    'Bosnia and Herzegovina'
+]
+
+
+employment_values = [
+    55.70000076,  51.40000153,  50.5       ,  75.69999695,
+    58.40000153,  40.09999847,  61.5       ,  57.09999847,
+    60.90000153,  66.59999847,  60.40000153,  68.09999847,
+    66.90000153,  53.40000153,  48.59999847,  56.79999924,
+    71.59999847,  58.40000153,  70.40000153,  41.20000076
+]
+
+# Employment data in 2007 for 20 countries
+employment = pd.Series(employment_values, index=countries)
+print employment.argmax()
+print employment.max()
+def max_employment(employment):
+
+    max_country = employment.argmax()      # Replace this with your code
+    max_value = employment.loc[max_country]   # Replace this with your code
+
+    return (max_country, max_value)
