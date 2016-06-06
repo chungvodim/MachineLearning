@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2fc3a6f2-9318-439a-b01e-f2247c3ed49d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>NumpyAndPandas.py</StartupFile>
+    <StartupFile>NumpyAndPandasFor2dData.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,8 +26,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DataAnalysisProcess.py" />
-    <Compile Include="NumpyAndPandas.py" />
     <Compile Include="NumpyAndPandasFor2dData.py" />
+    <Compile Include="NumpyAndPandas.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\2.7" />
