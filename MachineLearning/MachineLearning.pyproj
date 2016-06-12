@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2fc3a6f2-9318-439a-b01e-f2247c3ed49d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>NumpyAndPandasFor2dData.py</StartupFile>
+    <StartupFile>Naive_Bayes\studentMain.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,12 +25,21 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Naive_Bayes\ClassifyNB.py" />
+    <Compile Include="Naive_Bayes\prep_terrain_data.py" />
     <Compile Include="DataAnalysisProcess.py" />
+    <Compile Include="Naive_Bayes\class_vis.py" />
+    <Compile Include="Naive_Bayes\studentMain.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="NumpyAndPandasFor2dData.py" />
     <Compile Include="NumpyAndPandas.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\2.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Naive_Bayes\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
