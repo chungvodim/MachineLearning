@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2fc3a6f2-9318-439a-b01e-f2247c3ed49d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Naive_Bayes\studentMain.py</StartupFile>
+    <StartupFile>Naive_Bayes\nb_author_id.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Naive_Bayes\ClassifyNB.py" />
+    <Compile Include="Naive_Bayes\nb_author_id.py" />
     <Compile Include="Naive_Bayes\prep_terrain_data.py" />
     <Compile Include="DataAnalysisProcess.py" />
     <Compile Include="Naive_Bayes\class_vis.py" />
@@ -34,12 +35,24 @@
     </Compile>
     <Compile Include="NumpyAndPandasFor2dData.py" />
     <Compile Include="NumpyAndPandas.py" />
+    <Compile Include="tools\email_preprocess.py" />
+    <Compile Include="tools\feature_format.py" />
+    <Compile Include="tools\parse_out_email_text.py" />
+    <Compile Include="tools\startup.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\2.7" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Naive_Bayes\" />
+    <Folder Include="tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tools\email_authors.pkl" />
+    <Content Include="tools\python2_lesson06_keys.pkl" />
+    <Content Include="tools\python2_lesson13_keys.pkl" />
+    <Content Include="tools\python2_lesson14_keys.pkl" />
+    <Content Include="tools\word_data.pkl" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
