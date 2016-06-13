@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2fc3a6f2-9318-439a-b01e-f2247c3ed49d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>SVM\HelloSVM.py</StartupFile>
+    <StartupFile>Decison_Tree\studentMain.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Decison_Tree\classifyDT.py" />
+    <Compile Include="Decison_Tree\class_vis.py" />
+    <Compile Include="Decison_Tree\prep_terrain_data.py" />
+    <Compile Include="Decison_Tree\studentMain.py" />
     <Compile Include="Naive_Bayes\ClassifyNB.py" />
     <Compile Include="Naive_Bayes\nb_author_id.py" />
     <Compile Include="Naive_Bayes\prep_terrain_data.py" />
@@ -40,6 +44,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SVM\prep_terrain_data.py" />
+    <Compile Include="SVM\svm_author_id.py" />
     <Compile Include="tools\email_preprocess.py" />
     <Compile Include="tools\feature_format.py" />
     <Compile Include="tools\parse_out_email_text.py" />
@@ -50,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Naive_Bayes\" />
+    <Folder Include="Decison_Tree\" />
     <Folder Include="SVM\" />
     <Folder Include="tools\" />
   </ItemGroup>
