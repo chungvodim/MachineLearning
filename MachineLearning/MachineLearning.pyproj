@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2fc3a6f2-9318-439a-b01e-f2247c3ed49d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Decison_Tree\studentMain.py</StartupFile>
+    <StartupFile>calculator.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="calculator.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Decison_Tree\classifyDT.py" />
     <Compile Include="Decison_Tree\class_vis.py" />
     <Compile Include="Decison_Tree\prep_terrain_data.py" />
