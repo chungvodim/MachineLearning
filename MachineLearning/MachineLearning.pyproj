@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2fc3a6f2-9318-439a-b01e-f2247c3ed49d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Decison_Tree\dt_author_id.py</StartupFile>
+    <StartupFile>datasets_questions\explore_enron_data.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,6 +28,7 @@
     <Compile Include="calculator.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="datasets_questions\explore_enron_data.py" />
     <Compile Include="Decison_Tree\classifyDT.py" />
     <Compile Include="Decison_Tree\class_vis.py" />
     <Compile Include="Decison_Tree\dt_author_id.py" />
@@ -60,6 +61,7 @@
   <ItemGroup>
     <Folder Include="Naive_Bayes\" />
     <Folder Include="Decison_Tree\" />
+    <Folder Include="datasets_questions\" />
     <Folder Include="SVM\" />
     <Folder Include="tools\" />
   </ItemGroup>
