@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2fc3a6f2-9318-439a-b01e-f2247c3ed49d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>datasets_questions\explore_enron_data.py</StartupFile>
+    <StartupFile>outliers\outlier_removal_regression.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -44,6 +44,19 @@
     </Compile>
     <Compile Include="NumpyAndPandasFor2dData.py" />
     <Compile Include="NumpyAndPandas.py" />
+    <Compile Include="outliers\enron_outliers.py" />
+    <Compile Include="outliers\outlier_cleaner.py" />
+    <Compile Include="outliers\outlier_removal_regression.py" />
+    <Compile Include="Regression\ages_net_worths.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regression\regressionQuiz.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regression\studentRegression.py" />
+    <Compile Include="Regression\studentMain.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="SVM\class_vis.py" />
     <Compile Include="SVM\HelloSVM.py">
       <SubType>Code</SubType>
@@ -62,10 +75,14 @@
     <Folder Include="Naive_Bayes\" />
     <Folder Include="Decison_Tree\" />
     <Folder Include="datasets_questions\" />
+    <Folder Include="outliers\" />
+    <Folder Include="Regression\" />
     <Folder Include="SVM\" />
     <Folder Include="tools\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="outliers\practice_outliers_ages.pkl" />
+    <Content Include="outliers\practice_outliers_net_worths.pkl" />
     <Content Include="tools\email_authors.pkl" />
     <Content Include="tools\python2_lesson06_keys.pkl" />
     <Content Include="tools\python2_lesson13_keys.pkl" />
