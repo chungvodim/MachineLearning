@@ -11,7 +11,7 @@ import pickle
 import numpy
 import matplotlib.pyplot as plt
 import sys
-sys.path.append("../tools/")
+sys.path.append("C:/WorkSpace/MachineLearning/MachineLearning/tools/")
 from feature_format import featureFormat, targetFeatureSplit
 
 
@@ -39,7 +39,7 @@ def Draw(pred, features, poi, mark_poi=False, name="image.png", f1_name="feature
 
 
 ### load in the dict of dicts containing all the data on each person in the dataset
-data_dict = pickle.load( open("../final_project/final_project_dataset.pkl", "r") )
+data_dict = pickle.load( open("C:/WorkSpace/MachineLearning/MachineLearning/final_project/final_project_dataset.pkl", "r") )
 ### there's an outlier--remove it! 
 data_dict.pop("TOTAL", 0)
 
