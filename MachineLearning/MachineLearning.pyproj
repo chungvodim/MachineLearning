@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2fc3a6f2-9318-439a-b01e-f2247c3ed49d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>k_means\k_means_cluster.py</StartupFile>
+    <StartupFile>text_learning\hello_text_learning.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -67,6 +67,8 @@
     </Compile>
     <Compile Include="SVM\prep_terrain_data.py" />
     <Compile Include="SVM\svm_author_id.py" />
+    <Compile Include="text_learning\hello_text_learning.py" />
+    <Compile Include="text_learning\vectorize_text.py" />
     <Compile Include="tools\email_preprocess.py" />
     <Compile Include="tools\feature_format.py" />
     <Compile Include="tools\parse_out_email_text.py" />
@@ -85,6 +87,7 @@
     <Folder Include="outliers\" />
     <Folder Include="Regression\" />
     <Folder Include="SVM\" />
+    <Folder Include="text_learning\" />
     <Folder Include="tools\" />
   </ItemGroup>
   <ItemGroup>
@@ -4756,6 +4759,9 @@
     <Content Include="final_project\poi_names.txt" />
     <Content Include="outliers\practice_outliers_ages.pkl" />
     <Content Include="outliers\practice_outliers_net_worths.pkl" />
+    <Content Include="text_learning\from_chris.txt" />
+    <Content Include="text_learning\from_sara.txt" />
+    <Content Include="text_learning\test_email.txt" />
     <Content Include="tools\email_authors.pkl" />
     <Content Include="tools\python2_lesson06_keys.pkl" />
     <Content Include="tools\python2_lesson13_keys.pkl" />
